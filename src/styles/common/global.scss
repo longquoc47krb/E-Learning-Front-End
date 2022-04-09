@@ -1,0 +1,28 @@
+@import "./variables.scss";
+@import "./../custom/custom.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: $font-primary;
+  font-size: 16px;
+  font-weight: 500;
+}
+.d-flex {
+  display: flex;
+  align-items: center;
+  gap: 0 30px;
+  justify-content: space-between;
+}
+.d-flex-10 {
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}

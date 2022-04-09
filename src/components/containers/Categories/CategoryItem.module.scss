@@ -1,0 +1,17 @@
+.card {
+  overflow: hidden;
+  &Img {
+    padding: 10px 10px;
+    border-radius: 25px;
+    width: 25rem;
+    height: 20rem;
+    max-width: 25rem;
+    vertical-align: middle;
+  }
+}
+.card .cardImg {
+  transition: transform 2s ease;
+}
+.card:hover .cardImg {
+  transform: scale(1.2);
+}

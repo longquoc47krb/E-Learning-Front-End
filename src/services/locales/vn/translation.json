@@ -1,0 +1,29 @@
+{
+  "translation": {
+    "lang": "Ngôn ngữ",
+    "VN": "Tiếng Việt",
+    "EN": "Tiếng Anh"
+  },
+  "home": "Trang chủ",
+  "categories": "Thể loại",
+  "courses": "Khóa học",
+  "policy": "Điều khoản",
+  "contact": "Liên hệ",
+  "signin": "Đăng nhập",
+  "signup": "Đăng ký",
+  "slogan": {
+    "slogan1": "Học thoải mái tại chính ngôi nhà của bạn",
+    "slogan2": "Những khóa học chất lượng nhất",
+    "slogan3": "Cải thiện kỹ năng, có ngay việc \"xịn\" ",
+    "slogan4": "Việc học của bạn trở nên thú vị hơn"
+  },
+  "started": "Khám phá ngay!",
+  "join": "Tham gia ngay",
+  "top-categories": "Danh mục nổi bật",
+  "developer": "Công nghệ thông tin",
+  "design": "Thiết kế",
+  "marketing": "Marketing",
+  "photography": "Nhiếp ảnh",
+  "business": "Kinh doanh",
+  "health": "Sức khỏe"
+}

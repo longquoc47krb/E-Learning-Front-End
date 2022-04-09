@@ -1,0 +1,29 @@
+{
+  "translation": {
+    "lang": "Language",
+    "VN": "Vietnamese",
+    "EN": "English"
+  },
+  "home": "Home",
+  "categories": "Cateogries",
+  "courses": "Courses",
+  "policy": "Policy",
+  "contact": "Contact us",
+  "signin": "Sign in",
+  "signup": "Sign up",
+  "slogan": {
+    "slogan1": "Learn at the comfort of your own home",
+    "slogan2": "The best online courses you'll find",
+    "slogan3": "Enhance your skills, get the job",
+    "slogan4": "Making your learning more enjoyable"
+  },
+  "started": "Get Started",
+  "join": "Join now!",
+  "top-categories": "Top Categories",
+  "developer": "Developer",
+  "design": "Design",
+  "marketing": "Marketing",
+  "photography": "Photography",
+  "business": "Business",
+  "health": "Health & Care"
+}
