@@ -9,13 +9,13 @@ import {
 } from "reactstrap";
 import PropTypes from "prop-types";
 import style from "./CategoryItem.module.scss";
-import * as SC from "./../../presentational/components";
+import * as SC from "../styledComponents";
 function CategoryItem({ img, title, subtitle }) {
   return (
     <div>
-      <Card>
-        <div className={style.card}>
-          <CardImg top width="100%" src={img} className={style.cardImg} />
+      <Card className={style.card}>
+        <div className={style.cardImg}>
+          <CardImg top width="100%" src={img} />
         </div>
         <CardBody>
           <CardTitle>

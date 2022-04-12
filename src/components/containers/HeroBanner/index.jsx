@@ -4,8 +4,8 @@ import Slideshow from "./Slider";
 import { useTranslation } from "react-i18next";
 import Typewriter from "typewriter-effect";
 
-import * as SC from "./../../presentational/components";
-function HeroBanner() {
+import * as SC from "./../styledComponents";
+export function HeroBanner() {
   const { t } = useTranslation();
   return (
     <div className={style.hero}>
@@ -33,5 +33,3 @@ function HeroBanner() {
     </div>
   );
 }
-
-export default HeroBanner;

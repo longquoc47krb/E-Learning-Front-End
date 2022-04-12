@@ -1,12 +1,25 @@
 import React from "react";
-import * as SC from "./../../presentational/components";
+import * as SC from "../styledComponents";
 import { useTranslation } from "react-i18next";
 import CategoryItem from "./CategoryItem";
 import { CategoryList } from "./CategoryList";
-function Categories() {
+import styled from "styled-components";
+
+export const CategoriesContainer = styled.div`
+  padding: 0 1rem;
+  display: ${(props) => (props.display ? props.display : "static")};
+`;
+export const CategoriesGrid = styled.div`
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 2rem 2rem;
+  margin: ${(props) => (props.mg ? props.mg : "0")};
+  padding: ${(props) => (props.pd ? props.pd : "0")};
+`;
+export function Categories() {
   const { t } = useTranslation();
   return (
-    <SC.CategoriesContainer display="block">
+    <CategoriesContainer display="block">
       <SC.Typo
         fsize="3rem"
         fw="700"
@@ -18,7 +31,7 @@ function Categories() {
       >
         {t("top-categories")}
       </SC.Typo>
-      <SC.CategoriesGrid>
+      <CategoriesGrid>
         <CategoryItem
           title={t(`${CategoryList[0].dev.title}`)}
           img={CategoryList[0].dev.url}
@@ -43,9 +56,7 @@ function Categories() {
           title={t(`${CategoryList[0].health.title}`)}
           img={CategoryList[0].health.url}
         />
-      </SC.CategoriesGrid>
-    </SC.CategoriesContainer>
+      </CategoriesGrid>
+    </CategoriesContainer>
   );
 }
-
-export default Categories;

@@ -25,5 +25,7 @@
   "marketing": "Marketing",
   "photography": "Photography",
   "business": "Business",
-  "health": "Health & Care"
+  "health": "Health & Care",
+  "not-found": "Page not found",
+  "not-found-paragraph": "We're sorry, the page you were looking for isn't found here. The link you followed may either be broken or no longer exists. Please try again, or take a look at our site."
 }

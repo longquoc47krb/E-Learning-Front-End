@@ -26,4 +26,7 @@
   "photography": "Nhiếp ảnh",
   "business": "Kinh doanh",
   "health": "Sức khỏe"
+  ,
+  "not-found": "Không tìm thấy trang",
+  "not-found-paragraph": "Chúng tôi xin lỗi, trang bạn đang tìm kiếm không được tìm thấy ở đây. Liên kết bạn theo sau có thể bị phá vỡ hoặc không còn tồn tại. Vui lòng thử lại, hoặc xem trang web của chúng tôi."
 }

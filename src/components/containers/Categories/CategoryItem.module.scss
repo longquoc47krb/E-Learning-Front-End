@@ -1,17 +1,22 @@
 .card {
-  overflow: hidden;
+  padding: 10px;
   &Img {
-    padding: 10px 10px;
-    border-radius: 25px;
+    border-radius: 25px 25px 0 0;
     width: 25rem;
     height: 20rem;
     max-width: 25rem;
     vertical-align: middle;
+    overflow: hidden;
+    img {
+      height: 20rem;
+      width: 25rem;
+      border-radius: 25px 25px 0 0;
+    }
   }
-}
-.card .cardImg {
-  transition: transform 2s ease;
-}
-.card:hover .cardImg {
-  transform: scale(1.2);
+  &Img img {
+    transition: transform 0.5s ease-in-out;
+  }
+  &Img:hover img {
+    transform: scale(2) rotate(25deg);
+  }
 }
