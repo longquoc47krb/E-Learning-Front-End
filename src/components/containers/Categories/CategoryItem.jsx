@@ -8,13 +8,12 @@ import {
   CardImgOverlay,
 } from "reactstrap";
 import PropTypes from "prop-types";
-import style from "./CategoryItem.module.scss";
 import * as SC from "../styledComponents";
 function CategoryItem({ img, title, subtitle }) {
   return (
     <div>
-      <Card className={style.card}>
-        <div className={style.cardImg}>
+      <Card className="card">
+        <div className="cardImg">
           <CardImg top width="100%" src={img} />
         </div>
         <CardBody>

@@ -52,6 +52,7 @@
 .react-slideshow-container {
   position: relative;
 }
+//* Overlay cho slider
 .react-slideshow-container:after {
   content: "";
   position: absolute;
@@ -60,10 +61,11 @@
   width: 100%;
   height: 100%;
   display: inline-block;
+  background: rgb(2, 0, 36);
   background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 0.7861519607843137) 0%,
-    rgba(255, 0, 54, 0.16430322128851538) 100%
+    0deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(255, 0, 54, 0) 100%
   );
   z-index: 1;
 }

@@ -1,5 +1,3 @@
-@import "../../../styles/common/global.scss";
-
 @media (min-width: 992px) {
   .menu {
     align-items: center;
@@ -38,7 +36,8 @@
     font-size: 30px;
     cursor: pointer;
   }
-  svg path {
-    stroke: rgb(0, 0, 0);
+
+  .avatar {
+    margin: 0 15px 0 15px;
   }
 }

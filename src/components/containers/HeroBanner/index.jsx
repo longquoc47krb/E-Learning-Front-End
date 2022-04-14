@@ -1,5 +1,4 @@
 import React from "react";
-import style from "./HeroBanner.module.scss";
 import Slideshow from "./Slider";
 import { useTranslation } from "react-i18next";
 import Typewriter from "typewriter-effect";
@@ -8,10 +7,10 @@ import * as SC from "./../styledComponents";
 export function HeroBanner() {
   const { t } = useTranslation();
   return (
-    <div className={style.hero}>
-      <div className={style.heroSlider}>
-        <div className={style.heroSlogan}>
-          <Typewriter
+    <div className="hero">
+      <div className="heroSlider">
+        <div className="heroSlogan">
+          {/* <Typewriter
             options={{
               strings: [
                 `${t("slogan.slogan1")}`,
@@ -22,8 +21,8 @@ export function HeroBanner() {
               autoStart: true,
               loop: true,
             }}
-          />
-          <SC.Button fsize="24px" fw="700" className={style.heroButton}>
+          /> */}
+          <SC.Button fsize="24px" fw="700" className="heroButton">
             {t("discover")}
           </SC.Button>
         </div>

@@ -17,6 +17,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route exact path="*" element={<NotFound />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );

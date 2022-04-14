@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import style from "./NavBar.module.scss";
 import logo from "./assets/images/logo.png";
 import { GrCart, GrMenu } from "react-icons/gr";
 import { Badge, Avatar } from "@mui/material";
@@ -41,7 +40,7 @@ export const MenuContainer = styled.div`
   z-index: 10;
   height: 100%;
   display: flex;
-  gap: ${(props) => (props.gap ? props.gap : "0 1.5rem")};
+  gap: ${(props) => (props.gap ? props.gap : "0 1rem")};
 `;
 export const MenuItem = styled.li`
   list-style: none;
@@ -67,7 +66,7 @@ const theme = createTheme({
 
 export const NavBar = () => {
   // const [avtBG, setAvtBG] = useState("#ca786d");
-  const [isAuth, setAuth] = useState(true);
+  const [isAuth, setAuth] = useState(false);
   const [count, setCount] = useState(0);
   const { t } = useTranslation();
   const navigate = useNavigate();
@@ -107,29 +106,29 @@ export const NavBar = () => {
         onClick={() => navigate("/")}
       />
       <Search />
-      <MenuContainer className={style.menuContainer}>
+      <MenuContainer className="menuContainer">
         {MenuItems.map((item) => (
-          <MenuItem fw="600" className={style.menuItem}>
+          <MenuItem fw="600" className="menuItem">
             {t(item.title)}
           </MenuItem>
         ))}
         <ThemeProvider theme={theme}>
           <Badge badgeContent={count} color="primary" max={99}>
-            <GrCart className={style.cart} />
+            <GrCart className="cart" />
           </Badge>
         </ThemeProvider>
         <LanguagueContainer>
           <LanguageSelect />
         </LanguagueContainer>
         {isAuth ? (
-          <Avatar {...stringAvatar("Leo Messi")} />
+          <Avatar {...stringAvatar("Leo Messi")} className="avatar" />
         ) : (
           <SC.Button onClick={handleCount} radius="25px">
             {t("join")}
           </SC.Button>
         )}
       </MenuContainer>
-      <GrMenu className={style.menuToggle} />
+      <GrMenu className="menuToggle" />
     </HeaderContainer>
   );
 };

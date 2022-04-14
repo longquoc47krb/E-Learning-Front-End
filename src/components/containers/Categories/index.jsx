@@ -13,7 +13,7 @@ export const CategoriesContainer = styled.div`
 export const CategoriesGrid = styled.div`
   display: grid;
   grid-template-columns: auto auto auto;
-  gap: 2rem 2rem;
+  gap: 1rem 1rem;
   margin: ${(props) => (props.mg ? props.mg : "0")};
   padding: ${(props) => (props.pd ? props.pd : "0")};
 `;

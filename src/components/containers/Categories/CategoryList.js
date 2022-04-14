@@ -1,26 +1,26 @@
 export const CategoryList = [
   {
     title: "developer",
-    url: "https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80",
+    url: "https://elements-cover-images-0.imgix.net/92614c47-7239-4a50-a207-8f20a2f93e52?auto=compress%2Cformat&fit=max&w=900&s=91a8ed2824dec16d9ae04a2f9c1b1cde",
   },
   {
     title: "design",
-    url: "https://images.unsplash.com/photo-1574852859542-1b41217a7815?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80",
+    url: "https://media.istockphoto.com/vectors/graphic-designer-hiring-concept-vector-id1214838856?k=20&m=1214838856&s=612x612&w=0&h=Hizn2KknS_iUCwbKoI2ItcnxDva1mlxfNG9rviKSDz0=",
   },
   {
     title: "business",
-    url: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80",
+    url: "https://blog.tubikstudio.com/wp-content/uploads/2018/02/business_graphic_design_tubik.png",
   },
   {
     title: "marketing",
-    url: "https://images.unsplash.com/flagged/photo-1556514767-5c270b96a005?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80",
+    url: "https://static.vecteezy.com/system/resources/previews/002/037/235/non_2x/marketing-strategy-campaign-concept-vector.jpg",
   },
   {
     title: "photography",
-    url: "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    url: "https://shotkit.com/wp-content/uploads/2019/02/Earn-money-stock-photography.jpg",
   },
   {
     title: "health",
-    url: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    url: "https://i.pinimg.com/originals/0c/c7/67/0cc767db28c09cece26017ec036d68e5.jpg",
   },
 ];

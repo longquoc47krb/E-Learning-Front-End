@@ -9,7 +9,7 @@ export const Search = () => {
     <Search
       placeholder={t("search-placeholder")}
       onSearch={onSearch}
-      style={{ width: 350 }}
+      style={{ width: "auto" }}
     />
   );
 };
