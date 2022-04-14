@@ -1,22 +1,14 @@
 export const MenuItems = [
   {
-    title: "home",
-    url: "/",
-  },
-  {
     title: "categories",
     url: "/",
   },
   {
-    title: "courses",
+    title: "my-learning",
     url: "/",
   },
   {
-    title: "policy",
-    url: "/",
-  },
-  {
-    title: "contact",
+    title: "become-teacher",
     url: "/",
   },
 ];

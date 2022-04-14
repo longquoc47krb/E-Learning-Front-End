@@ -24,7 +24,7 @@ export function HeroBanner() {
             }}
           />
           <SC.Button fsize="24px" fw="700" className={style.heroButton}>
-            {t("started")}
+            {t("discover")}
           </SC.Button>
         </div>
 

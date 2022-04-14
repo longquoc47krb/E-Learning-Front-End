@@ -6,8 +6,8 @@
   },
   "home": "Home",
   "categories": "Cateogries",
-  "courses": "Courses",
-  "policy": "Policy",
+  "my-learning": "My learning",
+  "become-teacher": "Become a teacher",
   "contact": "Contact us",
   "signin": "Sign in",
   "signup": "Sign up",
@@ -17,7 +17,7 @@
     "slogan3": "Enhance your skills, get the job",
     "slogan4": "Making your learning more enjoyable"
   },
-  "started": "Get Started",
+  "discover": "Discover now",
   "join": "Join now!",
   "top-categories": "Top Categories",
   "developer": "Developer",
@@ -27,5 +27,7 @@
   "business": "Business",
   "health": "Health & Care",
   "not-found": "Page not found",
-  "not-found-paragraph": "We're sorry, the page you were looking for isn't found here. The link you followed may either be broken or no longer exists. Please try again, or take a look at our site."
+  "not-found-paragraph": "We're sorry, the page you were looking for isn't found here. The link you followed may either be broken or no longer exists. Please try again, or take a look at our site.",
+  "top-courses": "Top Courses",
+  "search-placeholder": "Search for anything"
 }

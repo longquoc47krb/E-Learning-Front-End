@@ -6,8 +6,8 @@
   },
   "home": "Trang chủ",
   "categories": "Thể loại",
-  "courses": "Khóa học",
-  "policy": "Điều khoản",
+  "my-learning": "Khóa học của tôi",
+  "become-teacher": "Trở thành giảng viên",
   "contact": "Liên hệ",
   "signin": "Đăng nhập",
   "signup": "Đăng ký",
@@ -17,7 +17,7 @@
     "slogan3": "Cải thiện kỹ năng, có ngay việc \"xịn\" ",
     "slogan4": "Việc học của bạn trở nên thú vị hơn"
   },
-  "started": "Khám phá ngay!",
+  "discover": "Khám phá ngay",
   "join": "Tham gia ngay",
   "top-categories": "Danh mục nổi bật",
   "developer": "Công nghệ thông tin",
@@ -25,8 +25,9 @@
   "marketing": "Marketing",
   "photography": "Nhiếp ảnh",
   "business": "Kinh doanh",
-  "health": "Sức khỏe"
-  ,
+  "health": "Sức khỏe",
   "not-found": "Không tìm thấy trang",
-  "not-found-paragraph": "Chúng tôi xin lỗi, trang bạn đang tìm kiếm không được tìm thấy ở đây. Liên kết bạn theo sau có thể bị phá vỡ hoặc không còn tồn tại. Vui lòng thử lại, hoặc xem trang web của chúng tôi."
+  "not-found-paragraph": "Chúng tôi xin lỗi, trang bạn đang tìm kiếm không được tìm thấy ở đây. Liên kết bạn theo sau có thể bị phá vỡ hoặc không còn tồn tại. Vui lòng thử lại, hoặc xem trang web của chúng tôi.",
+  "top-courses": "Khóa học nổi bật",
+  "search-placeholder": "Tìm kiếm khóa học"
 }
