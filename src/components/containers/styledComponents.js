@@ -12,6 +12,7 @@ export const Button = styled.button`
   color: ${(props) => (props.color ? props.color : props.theme.fontColor)};
   text-transform: uppercase;
   font-weight: ${(props) => (props.fw ? props.fw : "500")};
+  margin: ${(props) => (props.mg ? props.mg : "0")};
   &:hover {
     background-color: #9e3021;
   }

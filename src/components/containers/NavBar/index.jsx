@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import logo from "./assets/images/logo.png";
 import { GrCart, GrMenu } from "react-icons/gr";
 import { Badge, Avatar } from "@mui/material";
@@ -11,8 +12,8 @@ import { Search } from "./../../containers";
 import { CategoryList } from "./../Categories/CategoryList";
 import LanguageSelect from "../LanguageSelect";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
 import "../../../services/i18n";
+import { getFirstLetterOfTwoLastWords } from "./../../../services/stringHandling";
 import styled from "styled-components";
 import * as SC from "./../styledComponents";
 export const HeaderContainer = styled.div`
@@ -65,8 +66,9 @@ const theme = createTheme({
 });
 
 export const NavBar = () => {
-  // const [avtBG, setAvtBG] = useState("#ca786d");
-  const [isAuth, setAuth] = useState(false);
+  const [avtBG, setAvtBG] = useState(localStorage.getItem("avatar-color"));
+  const [isAuth, setAuth] = useState(true);
+
   const [count, setCount] = useState(0);
   const { t } = useTranslation();
   const navigate = useNavigate();
@@ -79,20 +81,16 @@ export const NavBar = () => {
     let color = "#";
 
     color += randomColor;
+    localStorage.setItem("avatar-color", color);
     /* eslint-enable no-bitwise */
     return color;
   }
   function stringAvatar(name) {
-    const lastElement = (str) => {
-      return str.split(" ").length;
-    };
     return {
       sx: {
-        bgcolor: avatarColor(name),
+        bgcolor: avtBG,
       },
-      children: `${name.split(" ")[lastElement(name) - 2][0]}${
-        name.split(" ")[lastElement(name) - 1][0]
-      }`,
+      children: getFirstLetterOfTwoLastWords(name),
     };
   }
 
@@ -121,9 +119,17 @@ export const NavBar = () => {
           <LanguageSelect />
         </LanguagueContainer>
         {isAuth ? (
-          <Avatar {...stringAvatar("Leo Messi")} className="avatar" />
+          <Avatar {...stringAvatar("Quốc")} className="avatar" />
         ) : (
-          <SC.Button radius="25px">{t("join")}</SC.Button>
+          <SC.Button
+            radius="25px"
+            onClick={() => {
+              navigate("/auth/signin");
+              console.log("click");
+            }}
+          >
+            {t("join")}
+          </SC.Button>
         )}
       </MenuContainer>
       <GrMenu className="menuToggle" />

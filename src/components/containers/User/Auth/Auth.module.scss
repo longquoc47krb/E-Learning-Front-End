@@ -1,0 +1,49 @@
+@import "./../../../../styles/common/variables.scss";
+
+.signin {
+  &Container {
+    display: flex;
+    width: 100%;
+    height: 627px;
+  }
+  &Left {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+  }
+  &Right {
+    width: 50%;
+  }
+  &Btn {
+    margin-bottom: 2rem;
+  }
+}
+.socialContainer {
+  display: flex;
+  gap: 0 1rem;
+  justify-content: center;
+
+  img {
+    width: 40px;
+  }
+}
+.InputContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  margin: 1rem auto;
+  width: 60%;
+}
+.goToSignUp {
+  display: flex;
+  gap: 0 0.3rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+.forget {
+  text-align: right;
+  cursor: pointer;
+  &:hover {
+    color: $primary-color;
+  }
+}
