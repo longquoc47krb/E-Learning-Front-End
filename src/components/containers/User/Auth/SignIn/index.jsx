@@ -20,7 +20,7 @@ export function SignIn() {
   return (
     <div className={style.signinContainer}>
       <div className={style.signinLeft}>
-        <SC.Typo fsize="2rem" fw="800" transform="uppercase">
+        <SC.Typo fsize="2rem" fw="800" transform="uppercase" pd="1rem 0">
           {t("signin")}
         </SC.Typo>
         <div className={style.InputContainer}>
@@ -62,7 +62,7 @@ export function SignIn() {
       </div>
       <div className={style.signinRight}>
         <img
-          src="https://nld.mediacdn.vn/thumb_w/684/291774122806476800/2022/2/2/messi-khoc-1643787982278949755165.jpg"
+          src="https://images.unsplash.com/photo-1550592704-6c76defa9985?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
           alt=""
           className="src"
         />

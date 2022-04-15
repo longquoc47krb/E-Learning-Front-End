@@ -4,15 +4,37 @@
   &Container {
     display: flex;
     width: 100%;
-    height: 627px;
   }
   &Left {
     position: relative;
-    width: 50%;
+    width: 40%;
     margin: 0 auto;
   }
   &Right {
-    width: 50%;
+    width: 60%;
+    img {
+      width: 100%;
+      -webkit-clip-path: polygon(
+        8% 0,
+        1% 25%,
+        8% 39%,
+        0 61%,
+        5% 76%,
+        0 100%,
+        100% 100%,
+        100% 0
+      );
+      clip-path: polygon(
+        8% 0,
+        1% 25%,
+        8% 39%,
+        0 61%,
+        5% 76%,
+        0 100%,
+        100% 100%,
+        100% 0
+      );
+    }
   }
   &Btn {
     margin-bottom: 2rem;
