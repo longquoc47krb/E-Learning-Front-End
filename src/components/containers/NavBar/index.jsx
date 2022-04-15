@@ -123,9 +123,7 @@ export const NavBar = () => {
         {isAuth ? (
           <Avatar {...stringAvatar("Leo Messi")} className="avatar" />
         ) : (
-          <SC.Button onClick={handleCount} radius="25px">
-            {t("join")}
-          </SC.Button>
+          <SC.Button radius="25px">{t("join")}</SC.Button>
         )}
       </MenuContainer>
       <GrMenu className="menuToggle" />

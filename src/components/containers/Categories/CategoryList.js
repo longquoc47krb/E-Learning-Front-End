@@ -17,10 +17,10 @@ export const CategoryList = [
   },
   {
     title: "photography",
-    url: "https://shotkit.com/wp-content/uploads/2019/02/Earn-money-stock-photography.jpg",
+    url: "https://static.vecteezy.com/system/resources/thumbnails/005/238/674/small_2x/photographer-and-camera-equipment-illustration-free-vector.jpg",
   },
   {
     title: "health",
-    url: "https://i.pinimg.com/originals/0c/c7/67/0cc767db28c09cece26017ec036d68e5.jpg",
+    url: "https://freedesignfile.com/upload/2021/04/Health-checkup-cartoon-illustration-vector.jpg",
   },
 ];
