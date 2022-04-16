@@ -67,7 +67,7 @@ const theme = createTheme({
 
 export const NavBar = () => {
   const [avtBG, setAvtBG] = useState(localStorage.getItem("avatar-color"));
-  const [isAuth, setAuth] = useState(true);
+  const [isAuth, setAuth] = useState(false);
 
   const [count, setCount] = useState(0);
   const { t } = useTranslation();
@@ -93,7 +93,6 @@ export const NavBar = () => {
       children: getFirstLetterOfTwoLastWords(name),
     };
   }
-
   return (
     <HeaderContainer pos="sticky">
       <Brand

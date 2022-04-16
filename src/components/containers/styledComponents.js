@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Button = styled.button`
+export const Button = styled.button.attrs({ type: "submit" })`
   padding: 10px 20px;
   width: ${(props) => (props.width ? props.width : "auto")};
   height: auto;

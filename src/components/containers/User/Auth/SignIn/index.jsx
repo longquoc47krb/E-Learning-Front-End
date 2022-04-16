@@ -10,13 +10,21 @@ import {
   AiOutlineEye,
 } from "react-icons/ai";
 import { useTranslation } from "react-i18next";
-import { Input } from "antd";
+import { Input, Form, Checkbox } from "antd";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { Formik } from "formik";
+import * as Yup from "yup";
 
 export function SignIn() {
   const navigate = useNavigate();
   const { t } = useTranslation();
+  const LoginSchema = Yup.object().shape({
+    email: Yup.string().email(t("emailInvalid")).required(t("emailRequired")),
+    password: Yup.string()
+      .min(3, t("passwordMin"))
+      .required(t("passwordRequired")),
+  });
   return (
     <div className={style.signinContainer}>
       <div className={style.signinLeft}>
@@ -45,7 +53,7 @@ export function SignIn() {
         >
           {t("forget-pw")}
         </SC.Typo>
-        <SC.Button width="60%" mg="0 0 2rem 0">
+        <SC.Button type="submit" width="60%" mg="0 0 2rem 0">
           {t("signin")}
         </SC.Button>
         <SC.Typo fw="400" mg="0 0 10px 0">
