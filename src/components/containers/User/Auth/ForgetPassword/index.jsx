@@ -4,7 +4,7 @@ import * as SC from "./../../../styledComponents";
 import { AiOutlineMail } from "react-icons/ai";
 import { Input } from "antd";
 import { useTranslation } from "react-i18next";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 export function ForgetPassword() {
   const { t } = useTranslation();
   const { control, handleSubmit } = useForm({
@@ -20,13 +20,21 @@ export function ForgetPassword() {
       </SC.Typo>
       <SC.Typo>{t("enter-email")}</SC.Typo>
       <div className={style.InputContainer}>
-        <Input
-          size="large"
-          placeholder="Email"
-          prefix={<AiOutlineMail className={style.email} />}
-        />
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <Controller
+            name="firstName"
+            control={control}
+            render={({ field }) => (
+              <Input
+                size="large"
+                placeholder="Email"
+                prefix={<AiOutlineMail className={style.email} />}
+              />
+            )}
+          />
 
-        <SC.Button>{t("send")}</SC.Button>
+          <SC.Button>{t("send")}</SC.Button>
+        </form>
       </div>
     </div>
   );
