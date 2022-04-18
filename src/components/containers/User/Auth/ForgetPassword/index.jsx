@@ -19,6 +19,15 @@ export function ForgetPassword() {
         {t("reset-password")}
       </SC.Typo>
       <SC.Typo>{t("enter-email")}</SC.Typo>
+      <div className={style.InputContainer}>
+        <Input
+          size="large"
+          placeholder="Email"
+          prefix={<AiOutlineMail className={style.email} />}
+        />
+
+        <SC.Button>{t("send")}</SC.Button>
+      </div>
     </div>
   );
 }
