@@ -9,6 +9,36 @@
     position: relative;
     width: 40%;
     margin: 0 auto;
+    .socialContainer {
+      display: flex;
+      gap: 0 1rem;
+      justify-content: center;
+
+      img {
+        width: 40px;
+      }
+    }
+
+    .goToSignUp {
+      display: flex;
+      gap: 0 0.3rem;
+      justify-content: center;
+      margin-top: 0.5rem;
+    }
+    .forget {
+      text-align: right;
+      cursor: pointer;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+    .InputContainer {
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.5rem;
+      margin: 1rem auto;
+      width: 60%;
+    }
   }
   &Right {
     width: 60%;
@@ -40,32 +70,70 @@
     margin-bottom: 2rem;
   }
 }
-.socialContainer {
-  display: flex;
-  gap: 0 1rem;
-  justify-content: center;
 
-  img {
-    width: 40px;
+.signup {
+  &Container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-image: url("https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+    .signUpform {
+      position: absolute;
+      top: 20px;
+      right: $width/5;
+      width: 60%;
+      background-color: rgb(179, 179, 179);
+      padding: 1rem 1rem;
+      border-radius: 25px;
+      border: 3px dotted;
+
+      .InputContainer {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+        margin: 1rem auto;
+        width: 50%;
+      }
+      .goToSignIn {
+        display: flex;
+        gap: 0 5px;
+        justify-content: center;
+      }
+    }
   }
 }
-.InputContainer {
-  display: flex;
-  flex-direction: column;
-  row-gap: 0.5rem;
-  margin: 1rem auto;
-  width: 60%;
-}
-.goToSignUp {
-  display: flex;
-  gap: 0 0.3rem;
-  justify-content: center;
-  margin-top: 0.5rem;
-}
-.forget {
-  text-align: right;
-  cursor: pointer;
-  &:hover {
-    color: $primary-color;
+.forgetPassword {
+  &Container {
+    position: relative;
+    width: 100%;
+    .InputContainer {
+      display: flex;
+      align-items: center;
+      gap: 0 1rem;
+      width: 60%;
+      margin: 1rem auto;
+    }
   }
+}
+.middleLine:before {
+  background-color: $middle-line-color;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 2rem;
+  margin-right: 5px;
+}
+.middleLine:after {
+  background-color: $middle-line-color;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 2rem;
+  margin-left: 5px;
 }
