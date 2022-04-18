@@ -28,6 +28,7 @@ function App() {
             element={<ForgetPassword />}
           />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
