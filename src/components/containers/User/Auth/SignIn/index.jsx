@@ -10,10 +10,9 @@ import {
   AiOutlineEye,
 } from "react-icons/ai";
 import { useTranslation } from "react-i18next";
-import { Input, Form, Checkbox } from "antd";
+import { Input } from "antd";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { Formik } from "formik";
 import * as Yup from "yup";
 
 export function SignIn() {
@@ -56,7 +55,7 @@ export function SignIn() {
         <SC.Button type="submit" width="60%" mg="0 0 2rem 0">
           {t("signin")}
         </SC.Button>
-        <SC.Typo fw="400" mg="0 0 10px 0">
+        <SC.Typo fw="400" mg="0 0 10px 0" className={style.middleLine}>
           {t("sign-in-with-social")}
         </SC.Typo>
         <div className={style.socialContainer}>
@@ -64,8 +63,8 @@ export function SignIn() {
           <img src={Google} alt="" id="gg" />
         </div>
         <div className={style.goToSignUp}>
-          <SC.Typo>{t("already-account")}</SC.Typo>
-          <Link to="/signup">{t("signup")}</Link>
+          <SC.Typo>{t("have-yet-account")}</SC.Typo>
+          <Link to="/auth/signup">{t("signup")}</Link>
         </div>
       </div>
       <div className={style.signinRight}>
