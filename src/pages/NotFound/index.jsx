@@ -9,8 +9,9 @@ export function NotFound() {
   return (
     <section classNaem="error">
       <div className="error__content">
+        <h1 className="message__title">{t("not-found")}</h1>
         <div className="error__message message">
-          <h1 className="message__title">{t("not-found")}</h1>
+          <img src="https://i.imgur.com/Q2BAOd2.png" alt="" />
           <p className="message__text">{t("not-found-paragraph")}</p>
         </div>
         <div className="error__nav">

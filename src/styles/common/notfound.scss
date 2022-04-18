@@ -1,19 +1,28 @@
 .error {
   &__content {
     min-height: 20rem;
+    h1 {
+      font-size: 3rem;
+      text-transform: uppercase;
+      font-weight: 900;
+    }
   }
+
   &__message {
     &.message {
-      width: 70rem;
-      margin: 0 auto;
-      margin-bottom: 5rem;
-      h1 {
-        font-size: 4rem;
-        text-transform: uppercase;
-        font-weight: 900;
-      }
+      width: 100%;
+      display: flex;
+
       p {
-        font-size: 1.2em;
+        font-size: 2em;
+        width: 40%;
+        padding: 0 2rem;
+      }
+      img {
+        width: 40%;
+        padding: 0 5%;
+        height: auto;
+        margin: 0 auto;
       }
     }
   }
