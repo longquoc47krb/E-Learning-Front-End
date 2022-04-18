@@ -1,6 +1,8 @@
 import React from "react";
 import style from "./../Auth.module.scss";
 import * as SC from "./../../../styledComponents";
+import Facebook from "./../../../../../assets/facebook.svg";
+import Google from "./../../../../../assets/google.svg";
 import {
   AiOutlineMail,
   AiOutlineLock,
@@ -9,43 +11,50 @@ import {
 } from "react-icons/ai";
 import { useTranslation } from "react-i18next";
 import { Input } from "antd";
+import { Link } from "react-router-dom";
 export function Register() {
   const { t } = useTranslation();
   return (
-    <div class={`form-container ${style.signupContainer}`}>
-      <form action="#">
-        <SC.Typo fsize="2rem" fw="800" transform="uppercase">
+    <div class={style.signupContainer}>
+      <form className={style.signUpform} action="#">
+        <SC.Typo fsize="2rem" fw="800" transform="uppercase" mg="0 0 2rem 0">
           {t("create-account")}
         </SC.Typo>
-        <div className={style.socialContainer}>
-          <img
-            alt="svgImg"
-            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNDgiIGhlaWdodD0iNDgiCnZpZXdCb3g9IjAgMCA0OCA0OCIKc3R5bGU9IiBmaWxsOiMwMDAwMDA7Ij48bGluZWFyR3JhZGllbnQgaWQ9IkxkNnNxcnRjeE15Y2tFbDZ4ZURkTWFfdUxXVjVBOXZYSVB1X2dyMSIgeDE9IjkuOTkzIiB4Mj0iNDAuNjE1IiB5MT0iOS45OTMiIHkyPSI0MC42MTUiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMyYWE0ZjQiPjwvc3RvcD48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMwMDdhZDkiPjwvc3RvcD48L2xpbmVhckdyYWRpZW50PjxwYXRoIGZpbGw9InVybCgjTGQ2c3FydGN4TXlja0VsNnhlRGRNYV91TFdWNUE5dlhJUHVfZ3IxKSIgZD0iTTI0LDRDMTIuOTU0LDQsNCwxMi45NTQsNCwyNHM4Ljk1NCwyMCwyMCwyMHMyMC04Ljk1NCwyMC0yMFMzNS4wNDYsNCwyNCw0eiI+PC9wYXRoPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0yNi43MDcsMjkuMzAxaDUuMTc2bDAuODEzLTUuMjU4aC01Ljk4OXYtMi44NzRjMC0yLjE4NCwwLjcxNC00LjEyMSwyLjc1Ny00LjEyMWgzLjI4M1YxMi40NiBjLTAuNTc3LTAuMDc4LTEuNzk3LTAuMjQ4LTQuMTAyLTAuMjQ4Yy00LjgxNCwwLTcuNjM2LDIuNTQyLTcuNjM2LDguMzM0djMuNDk4SDE2LjA2djUuMjU4aDQuOTQ4djE0LjQ1MiBDMjEuOTg4LDQzLjksMjIuOTgxLDQ0LDI0LDQ0YzAuOTIxLDAsMS44Mi0wLjA4NCwyLjcwNy0wLjIwNFYyOS4zMDF6Ij48L3BhdGg+PC9zdmc+"
-          />
-          <div className="icons8-google"></div>
-        </div>
-        <SC.Typo>{t("register-by-email")}</SC.Typo>
-        <div className={style.InputContainer}>
+        <div className={style.InputContainer} id="signin">
           <Input
-            placeholder="Full Name"
+            size="large"
+            placeholder={t("full-name")}
             prefix={<AiOutlineMail className={style.fullName} />}
           />
           <Input
+            size="large"
             placeholder="Email"
             prefix={<AiOutlineMail className={style.email} />}
           />
-          <Input
-            placeholder="Password"
+          <Input.Password
+            size="large"
+            placeholder={t("password")}
             prefix={<AiOutlineLock className={style.password} />}
-            suffix={<AiOutlineEye />}
+            iconRender={(visible) =>
+              visible ? <AiOutlineEye /> : <AiOutlineEyeInvisible />
+            }
           />
-          <Input
-            placeholder="Re-type Password"
+          <Input.Password
+            size="large"
+            placeholder={t("re-type-password")}
             prefix={<AiOutlineLock className={style.repassword} />}
-            suffix={<AiOutlineEye />}
+            iconRender={(visible) =>
+              visible ? <AiOutlineEye /> : <AiOutlineEyeInvisible />
+            }
           />
         </div>
-        <SC.Button>{t("sign-up")}</SC.Button>
+        <SC.Button mg="0 0 1rem 0" width="50%">
+          {t("signup")}
+        </SC.Button>
+        <div className={style.goToSignIn}>
+          <SC.Typo>{t("already-account")}</SC.Typo>
+          <Link to="/auth/signin">{t("signin")}</Link>
+        </div>
       </form>
     </div>
   );
