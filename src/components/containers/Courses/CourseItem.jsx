@@ -7,6 +7,8 @@ import {
   CardSubtitle,
   CardImgOverlay,
 } from "reactstrap";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 import PropTypes from "prop-types";
 import style from "./CourseItem.module.scss";
 import * as SC from "../styledComponents";
