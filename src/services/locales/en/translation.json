@@ -23,6 +23,9 @@
   "reset-password": "Reset password",
   "enter-email": "Please enter your email. A reset-link will be sent to your email.",
   "send": "Send",
+  "emailRequired": "Please enter your email.",
+  "emailInvalid": "Please insert a valid email address.",
+  "send-to-email-success": "Successfully sent",
   "slogan": {
     "slogan1": "Learn at the comfort of your own home",
     "slogan2": "The best online courses you'll find",

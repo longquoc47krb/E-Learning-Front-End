@@ -23,6 +23,9 @@
   "reset-password": "Khôi phục mật khẩu",
   "enter-email": "Vui lòng nhập email của bạn. Một đường dẫn khôi phục mật khẩu sẽ được gửi đến bạn.",
   "send": "Gửi",
+  "emailRequired": "Trường không được để trống",
+  "emailInvalid": "Vui lòng nhập email hợp lệ",
+  "send-to-email-success": "Đã gửi link đến email của bạn",
   "slogan": {
     "slogan1": "Học thoải mái tại chính ngôi nhà của bạn",
     "slogan2": "Những khóa học chất lượng nhất",
