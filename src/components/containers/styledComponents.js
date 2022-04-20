@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "./../../device";
 
 export const Button = styled.button.attrs({ type: "submit" })`
   padding: 10px 20px;
@@ -15,6 +16,10 @@ export const Button = styled.button.attrs({ type: "submit" })`
   margin: ${(props) => (props.mg ? props.mg : "0")};
   &:hover {
     background-color: #9e3021;
+  }
+  @media (max-width: 768px ad) {
+    height: auto;
+    width: 20%;
   }
 `;
 Button.defaultProps = {
@@ -38,4 +43,9 @@ export const Typo = styled.p`
   text-transform: ${(props) => (props.transform ? props.transform : "none")};
   border-left: ${(props) => (props.bdLeft ? props.bdLeft : "none")};
   display: ${(props) => (props.display ? props.display : "static")};
+  color: ${(props) => (props.color ? props.color : "black")};
+  @media (max-width: 768px) {
+    height: auto;
+    width: 20%;
+  }
 `;
