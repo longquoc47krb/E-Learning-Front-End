@@ -35,6 +35,10 @@ export const Brand = styled.img.attrs((props) => ({
   width: ${(props) => (props.w ? props.w : "1rem")};
   height: ${(props) => (props.h ? props.h : "1rem")};
   background-color: ${(props) => (props.bg ? props.bg : "#fff")};
+  @media (max-width: 768px) {
+    height: auto;
+    width: 20%;
+  }
 `;
 export const MenuContainer = styled.div`
   align-items: center;
@@ -42,6 +46,9 @@ export const MenuContainer = styled.div`
   height: 100%;
   display: flex;
   gap: ${(props) => (props.gap ? props.gap : "0 1rem")};
+  @media (max-width: 768px) {
+    gap: 0 0.5rem;
+  }
 `;
 export const MenuItem = styled.li`
   list-style: none;
@@ -50,6 +57,9 @@ export const MenuItem = styled.li`
   text-transform: capitalize;
   font-size: ${(props) => (props.fsize ? props.fsize : "16px")};
   font-weight: ${(props) => (props.fw ? props.fw : "500")};
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 export const LanguagueContainer = styled.div`
   padding-left: 10px;
