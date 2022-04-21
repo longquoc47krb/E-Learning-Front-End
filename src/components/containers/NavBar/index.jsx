@@ -6,16 +6,16 @@ import { Badge, Avatar } from "@mui/material";
 import { deepOrange } from "@mui/material/colors";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "antd/dist/antd.css";
-import { Menu } from "antd";
+import { Menu, Dropdown } from "antd";
 import { MenuItems } from "./MenuItems";
 import { Search } from "./../../containers";
-import { CategoryList } from "./../Categories/CategoryList";
 import LanguageSelect from "../LanguageSelect";
 import { useTranslation } from "react-i18next";
 import "../../../services/i18n";
 import { getFirstLetterOfTwoLastWords } from "./../../../services/stringHandling";
 import styled from "styled-components";
 import * as SC from "./../styledComponents";
+
 export const HeaderContainer = styled.div`
   position: ${(props) => (props.pos ? props.pos : "static")};
   top: 0;
@@ -35,6 +35,7 @@ export const Brand = styled.img.attrs((props) => ({
   width: ${(props) => (props.w ? props.w : "1rem")};
   height: ${(props) => (props.h ? props.h : "1rem")};
   background-color: ${(props) => (props.bg ? props.bg : "#fff")};
+  margin: 0;
   @media (max-width: 768px) {
     height: auto;
     width: 20%;
@@ -77,15 +78,11 @@ const theme = createTheme({
 
 export const NavBar = () => {
   const [avtBG, setAvtBG] = useState(localStorage.getItem("avatar-color"));
-  const [isAuth, setAuth] = useState(false);
+  const [isAuth, setAuth] = useState(true);
 
   const [count, setCount] = useState(0);
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const handleCount = () => {
-    setCount(count + 1);
-    console.log("Count: " + count);
-  };
   function avatarColor(string) {
     const randomColor = Math.floor(Math.random() * 16777215).toString(16);
     let color = "#";
@@ -128,7 +125,15 @@ export const NavBar = () => {
           <LanguageSelect />
         </LanguagueContainer>
         {isAuth ? (
-          <Avatar {...stringAvatar("Quốc")} className="avatar" />
+          <div className="avatar_dropdown">
+            <Avatar {...stringAvatar("Quốc Long")} className="avatar" />
+            <div class="avatar_dropdown_content">
+              <p>Hello World!</p>
+              <p>Hello World!</p>
+              <p>Hello World!</p>
+              <SC.Button>{t("logout")}</SC.Button>
+            </div>
+          </div>
         ) : (
           <SC.Button
             radius="25px"
