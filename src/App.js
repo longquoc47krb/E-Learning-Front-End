@@ -1,10 +1,5 @@
 import "./App.css";
-import {
-  NavBar,
-  HeroBanner,
-  Footer,
-  Categories,
-} from "./components/containers/";
+import { NavBar, Footer } from "./components/containers/";
 import { Home, NotFound } from "./pages";
 import "./styles/common/global.scss";
 import { SignIn } from "./components/containers/User/Auth/SignIn";
