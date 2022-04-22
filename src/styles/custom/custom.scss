@@ -1,5 +1,5 @@
 @import "./../common/variables.scss";
-// ant design
+/* ant design */
 .ant-select:not(.ant-select-customize-input) .ant-select-selector {
   border: none;
 }
@@ -23,12 +23,19 @@
   border: none;
 }
 .ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  background-color: transparent;
   position: relative;
   background-color: #fff;
-  border: none;
   border-radius: 2px;
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
+.ant-select-show-search.ant-select:not(.ant-select-customize-input)
+  .ant-select-selector
+  input {
+  cursor: auto;
+  color: black;
+}
+
 //*Search
 .ant-input-group-wrapper .ant-input-search {
 }
