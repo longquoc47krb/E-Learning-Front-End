@@ -6,6 +6,7 @@
 @import "./hero.scss";
 @import "./notfound.scss";
 @import "./pagination.scss";
+@import "./search.scss";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -79,7 +80,7 @@ html {
 }
 
 .social-share-item.instagram .social-share-icon {
-  color: #e4405f;
+  color: #ff002f;
 }
 
 .social-share-item.twitter {
