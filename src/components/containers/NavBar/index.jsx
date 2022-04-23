@@ -3,10 +3,8 @@ import { useNavigate } from "react-router-dom";
 import logo from "./assets/images/logo.png";
 import { GrCart, GrMenu } from "react-icons/gr";
 import { Badge, Avatar } from "@mui/material";
-import { deepOrange } from "@mui/material/colors";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "antd/dist/antd.css";
-import { Menu, Dropdown } from "antd";
 import { MenuItems } from "./MenuItems";
 import { Search } from "./../../containers";
 import LanguageSelect from "../LanguageSelect";
@@ -15,6 +13,7 @@ import "../../../services/i18n";
 import { getFirstLetterOfTwoLastWords } from "./../../../services/stringHandling";
 import styled from "styled-components";
 import * as SC from "./../styledComponents";
+import { Autocomplete } from "../../presentational";
 
 export const HeaderContainer = styled.div`
   position: ${(props) => (props.pos ? props.pos : "static")};
