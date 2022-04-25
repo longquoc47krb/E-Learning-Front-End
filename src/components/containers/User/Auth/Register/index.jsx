@@ -11,6 +11,7 @@ import {
 import { useTranslation } from "react-i18next";
 import { Input } from "antd";
 import { Link } from "react-router-dom";
+
 export function Register() {
   const { t } = useTranslation();
   return (
@@ -51,6 +52,7 @@ export function Register() {
                 visible ? <AiOutlineEye /> : <AiOutlineEyeInvisible />
               }
             />
+            <label>{t("update-avatar")}</label>
           </div>
           <SC.Button mg="1rem 0 1rem 0" width="50%">
             {t("signup")}

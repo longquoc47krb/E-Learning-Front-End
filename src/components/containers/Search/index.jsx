@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import axios from "axios";
 import { ImSearch } from "react-icons/im";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
+import { ToastContainer, toast } from "react-toastify";
 export const Search = () => {
   const [suggestions, setSuggestions] = useState([]);
   const [value, setValue] = useState("");
@@ -25,9 +26,11 @@ export const Search = () => {
     })();
   }, []);
   const handleOnSearch = (string, results) => {
-    // onSearch will have as the first callback parameter
-    // the string searched and for the second the results.
     console.log(string, results);
+    // results contains the list of results, if its length is 0, it means that nothing was found
+    if (results.length === 0) {
+      // or add your custom code to show the error
+    }
   };
 
   const handleOnHover = (result) => {

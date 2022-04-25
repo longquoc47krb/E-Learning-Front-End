@@ -13,7 +13,6 @@ import "../../../services/i18n";
 import { getFirstLetterOfTwoLastWords } from "./../../../services/stringHandling";
 import styled from "styled-components";
 import * as SC from "./../styledComponents";
-import { Autocomplete } from "../../presentational";
 
 export const HeaderContainer = styled.div`
   position: ${(props) => (props.pos ? props.pos : "static")};
