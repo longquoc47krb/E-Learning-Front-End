@@ -1,8 +1,6 @@
 import React from "react";
 import style from "./../Auth.module.scss";
 import * as SC from "./../../../styledComponents";
-import Facebook from "./../../../../../assets/facebook.svg";
-import Google from "./../../../../../assets/google.svg";
 import {
   AiOutlineMail,
   AiOutlineLock,
@@ -16,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import { Paper } from "@mui/material";
 import { FaFacebookF, FaGoogle } from "react-icons/fa";
+import { UploadImage } from "../../../../presentational";
 export function SignIn() {
   const navigate = useNavigate();
   const { t } = useTranslation();
