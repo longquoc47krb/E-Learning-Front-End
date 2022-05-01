@@ -5,3 +5,4 @@ export * from "./LanguageSelect";
 export * from "./NavBar";
 export * from "./Courses";
 export * from "./Search";
+export * from "./Cart";
