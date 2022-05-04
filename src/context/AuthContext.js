@@ -6,11 +6,9 @@ export function useAuth() {
 }
 export function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState();
+  const signUp = (email, password) => {};
   const value = {
     currentUser,
   };
-  return (
-  <AuthContext.Provider value={value}>
-      {children}
-  </AuthContext.Provider>);
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
