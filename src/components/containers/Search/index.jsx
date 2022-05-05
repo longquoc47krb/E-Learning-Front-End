@@ -56,7 +56,7 @@ export const Search = () => {
   };
 
   return (
-    <div style={{ width: 400 }}>
+    <div style={{ width: 300 }}>
       <ReactSearchAutocomplete
         items={suggestions}
         onSearch={handleOnSearch}
