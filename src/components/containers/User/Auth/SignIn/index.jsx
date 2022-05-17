@@ -14,16 +14,10 @@ import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import { Paper } from "@mui/material";
 import { FaFacebookF, FaGoogle } from "react-icons/fa";
-import { UploadImage } from "../../../../presentational";
 export function SignIn() {
   const navigate = useNavigate();
   const { t } = useTranslation();
-  const LoginSchema = Yup.object().shape({
-    email: Yup.string().email(t("emailInvalid")).required(t("emailRequired")),
-    password: Yup.string()
-      .min(3, t("passwordMin"))
-      .required(t("passwordRequired")),
-  });
+
   return (
     <div className={style.signinContainer}>
       <Paper elevation={16} className={style.signinForm}>

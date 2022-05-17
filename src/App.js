@@ -6,8 +6,9 @@ import { SignIn } from "./components/containers/User/Auth/SignIn";
 import { Register } from "./components/containers/User/Auth/Register";
 import { ForgetPassword } from "./components/containers/User/Auth/ForgetPassword";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
+import { useUserContext } from "./context/userContext";
 function App() {
+  const { loading, error, user } = useUserContext();
   return (
     <Router>
       <div className="App">
