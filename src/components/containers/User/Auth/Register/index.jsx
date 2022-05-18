@@ -11,13 +11,14 @@ import {
 import { useTranslation } from "react-i18next";
 import { Input } from "antd";
 import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "../../../../../context/AuthContext";
+import { useUserContext } from "../../../../../context/userContext";
 export function Register() {
   const { t } = useTranslation();
   const emailRef = useRef();
+  const fullNameRef = useRef();
   const passwordRef = useRef();
   const passwordConfirmRef = useRef();
-  const { signup } = useAuth();
+  const { registerUser } = useUserContext();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -31,7 +32,10 @@ export function Register() {
     try {
       setError("");
       setLoading(true);
-      await signup(emailRef.current.value, passwordRef.current.value);
+      const email = emailRef.current.value;
+      const name = fullNameRef.current.value;
+      const password = passwordRef.current.value;
+      if (email && password && name) registerUser(email, password, name);
       navigate("/");
     } catch {
       setError("Failed to create an account");
