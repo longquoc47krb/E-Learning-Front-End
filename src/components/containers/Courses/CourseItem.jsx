@@ -13,24 +13,21 @@ import PropTypes from "prop-types";
 import style from "./CourseItem.module.scss";
 import * as SC from "../styledComponents";
 import { Loading } from "./../../presentational";
-function CourseItem({ courses, loading }) {
-  if (loading) {
-    return <Loading />;
-  }
+import { Rating } from "@mui/material";
+function CourseItem({ img, title, author, rating, price }) {
   return (
     <div>
-      {courses.map((course) => {
-        <Card className={style.card}>
-          <div className={style.cardImg}>
-            <CardImg top width="100%" src={course.full} />
-          </div>
-          <CardBody>
-            <CardTitle>
-              <SC.Typo transform="capitalize">{course.description}</SC.Typo>
-            </CardTitle>
-          </CardBody>
-        </Card>;
-      })}
+      <Card className="card">
+        <CardImg top width="100%" src={img} />
+        <CardBody>
+          <CardTitle>
+            <SC.Typo transform="capitalize">{title}</SC.Typo>
+          </CardTitle>
+          <CardSubtitle>{author}</CardSubtitle>
+          <Rating size="small" value={rating} precision={0.5} readOnly />
+          <SC.Typo transform="capitalize">{price}</SC.Typo>
+        </CardBody>
+      </Card>
     </div>
   );
 }

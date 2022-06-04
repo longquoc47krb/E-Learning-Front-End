@@ -11,42 +11,20 @@ import {
 import { useTranslation } from "react-i18next";
 import { Input } from "antd";
 import { Link, useNavigate } from "react-router-dom";
-import { useUserContext } from "../../../../../context/userContext";
 export function Register() {
   const { t } = useTranslation();
   const emailRef = useRef();
   const fullNameRef = useRef();
   const passwordRef = useRef();
   const passwordConfirmRef = useRef();
-  const { registerUser } = useUserContext();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  async function handleSubmit(e) {
-    e.preventDefault();
 
-    if (passwordRef.current.value !== passwordConfirmRef.current.value) {
-      return setError("Passwords do not match");
-    }
-
-    try {
-      setError("");
-      setLoading(true);
-      const email = emailRef.current.value;
-      const name = fullNameRef.current.value;
-      const password = passwordRef.current.value;
-      if (email && password && name) registerUser(email, password, name);
-      navigate("/");
-    } catch {
-      setError("Failed to create an account");
-    }
-
-    setLoading(false);
-  }
   return (
     <div className={style.signupContainer}>
       <Paper className={style.signUpform} elevation={16}>
-        <form action="#">
+        <form>
           <SC.Typo fsize="2rem" fw="800" transform="uppercase" mg="0 0 2rem 0">
             {t("create-account")}
           </SC.Typo>
@@ -81,7 +59,6 @@ export function Register() {
                 visible ? <AiOutlineEye /> : <AiOutlineEyeInvisible />
               }
             />
-            <label>{t("update-avatar")}</label>
           </div>
           <SC.Button mg="1rem 0 1rem 0" width="50%">
             {t("signup")}

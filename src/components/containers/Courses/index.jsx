@@ -8,6 +8,7 @@ import style from "./Course.module.scss";
 import { Loading } from "./../../presentational";
 import UsePagination from "../../presentational/Pagination/usePagination";
 import { Pagination } from "@mui/material/Pagination";
+import CourseItem from "./CourseItem";
 export const CoursesContainer = styled.div`
   padding: 0 1rem;
   display: ${(props) => (props.display ? props.display : "static")};
@@ -21,8 +22,8 @@ export const CoursesGrid = styled.div`
 `;
 export function Courses() {
   const { t } = useTranslation();
-  const [people, setPeople] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [courses, setCourses] = useState([]);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [page, setPage] = useState(1);
   const PerPage = 4;
@@ -31,10 +32,8 @@ export function Courses() {
   useEffect(() => {
     (async () => {
       try {
-        const data = await axios.get(
-          "https://random-data-api.com/api/nation/random_nation?size=50"
-        );
-        setPeople(data.data);
+        const data = await axios.get("http://localhost:3000/course");
+        setCourses(data.data);
       } catch {
         setError(true);
       } finally {
@@ -42,7 +41,6 @@ export function Courses() {
       }
     })();
   }, []);
-
   const handleChangePage = (event, newPage) => {
     // set current page as newPage
     setPage(newPage - 1);
@@ -68,28 +66,19 @@ export function Courses() {
         ) : (
           <>
             <div className="content">
-              <div className="items">
-                {people.slice(firstIndex, lastIndex).map((el) => (
-                  <div className="item" key={el.uid}>
-                    <img
-                      src={`https://avatars.dicebear.com/api/miniavs/${el.first_name}.svg`}
-                      alt={`${el.username} profile`}
-                      className="item__img"
-                    />
-
-                    <div className="item__info">
-                      <p className="nationality">
-                        Nationality: {el.nationality}
-                      </p>
-                      <p className="lang">Language: {el.language}</p>
-                      <p className="capital">{el.capital}</p>
-                    </div>
-                  </div>
+              <CoursesGrid>
+                {courses.slice(firstIndex, lastIndex).map((el) => (
+                  <CourseItem
+                    title={el.name}
+                    img="https://static.vecteezy.com/system/resources/previews/002/037/235/non_2x/marketing-strategy-campaign-concept-vector.jpg"
+                    author={el.author}
+                    rating={el.rating}
+                  />
                 ))}
-              </div>
+              </CoursesGrid>
               <div className="pagination">
                 <UsePagination
-                  pageCount={Math.ceil(people.length / 4)}
+                  pageCount={Math.ceil(courses.length / 6)}
                   onChangeHandler={handleChangePage}
                   variant={"text"}
                   className={style.paginationLinks}

@@ -1,0 +1,69 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "course": [
+    {
+      "name": "ReactJs",
+      "author": "Long",
+      "rating": 5,
+      "price": "320000"
+    },
+    {
+      "name": "NodeJs",
+      "author": "Long",
+      "rating": 3.5,
+      "price": "420000"
+    },
+    {
+      "name": "Vue1",
+      "author": "Long",
+      "rating": 1,
+      "price": "120000"
+    },
+    {
+      "name": "Vue2",
+      "author": "Long",
+      "rating": 1,
+      "price": "120000"
+    },
+    {
+      "name": "Vue3",
+      "author": "Long",
+      "rating": 1,
+      "price": "120000"
+    },
+    {
+      "name": "Vue4",
+      "author": "Long",
+      "rating": 1,
+      "price": "120000"
+    },
+    {
+      "name": "Vue5",
+      "author": "Long",
+      "rating": 1,
+      "price": "120000"
+    },
+    {
+      "name": "Vue6",
+      "author": "Long",
+      "rating": 1,
+      "price": "120000"
+    }
+  ]
+}
