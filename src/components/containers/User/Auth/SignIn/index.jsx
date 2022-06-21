@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import style from "./../Auth.module.scss";
 import * as SC from "./../../../styledComponents";
 import {
@@ -10,14 +10,28 @@ import {
 import { useTranslation } from "react-i18next";
 import { Input } from "antd";
 import { Link } from "react-router-dom";
+import firebase from "firebase/compat/app";
 import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import { Paper } from "@mui/material";
 import { FaFacebookF, FaGoogle } from "react-icons/fa";
+import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
+import { app, uiConfig} from './../../../../../config/firebase';
 export function SignIn() {
   const navigate = useNavigate();
   const { t } = useTranslation();
-
+  const [isSignedIn, setIsSignedIn] = useState(false); // Local signed-in state.
+  // handle Firebase auth changed
+  useEffect(() => {
+    const unregisterAuthObserver = firebase.auth().onAuthStateChanged(user => {
+      // setIsSignedIn(!!user);
+      if(!user){
+        console.log('Chưa đăng nhập')
+      }
+      console.log('Login user: ', user.displayName)
+    });
+    return () => unregisterAuthObserver(); // Make sure we un-register Firebase observers when the component unmounts.
+  })  
   return (
     <div className={style.signinContainer}>
       <Paper elevation={16} className={style.signinForm}>

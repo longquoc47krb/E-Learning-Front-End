@@ -137,7 +137,6 @@ export const NavBar = () => {
             radius="25px"
             onClick={() => {
               navigate("/auth/signin");
-              console.log("click");
             }}
           >
             {t("join")}

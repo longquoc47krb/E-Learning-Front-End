@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { device } from "./../../device";
 
 export const Button = styled.button.attrs({ type: "submit" })`
   padding: 10px 20px;
